@@ -5,7 +5,9 @@ import java.util.List;
 import org.mahikero01.model.Customer;
 import org.mahikero01.repository.CustomerRepository;
 import org.mahikero01.repository.HibernateCustomerRepositoryImpl;
+import org.springframework.stereotype.Service;
 
+@Service("customerService")
 public class CustomerServiceImpl implements CustomerService {
 
 	private CustomerRepository customerRepository = new HibernateCustomerRepositoryImpl();
