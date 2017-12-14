@@ -10,9 +10,15 @@ import org.springframework.stereotype.Service;
 @Service("customerService")
 public class CustomerServiceImpl implements CustomerService {
 
-	@Autowired
+	//@Autowired
 	private CustomerRepository customerRepository;
 	
+	@Autowired
+	public void setCustomerRepository(CustomerRepository customerRepository) {
+		System.out.println("We are using setter injection");
+		this.customerRepository = customerRepository;
+	}
+
 	/* (non-Javadoc)
 	 * @see org.mahikero01.service.CustomerService#findAll()
 	 */
